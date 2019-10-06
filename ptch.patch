@@ -90,8 +90,7 @@ diff -ruN original/linux-3.16.0/sh_task_info/sh_task_info.c linux-3.16.0/sh_task
 +					  (long)task->prio, \
 +					  (long)task->rt_priority, \
 +					  (long)task->static_prio, \
-+					  (long)task->normal_prio, \
-+					  );
++					  (long)task->normal_prio);
 +
 +			char *otpt;
 +
