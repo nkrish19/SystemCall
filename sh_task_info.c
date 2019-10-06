@@ -44,8 +44,7 @@ asmlinkage long sys_sh_task_info(int pidt, char *filename)
 					  (long)task->prio, \
 					  (long)task->rt_priority, \
 					  (long)task->static_prio, \
-					  (long)task->normal_prio, \
-					  );
+					  (long)task->normal_prio);
 
 			char *otpt;
 
