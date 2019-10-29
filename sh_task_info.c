@@ -60,17 +60,15 @@ asmlinkage long sys_sh_task_info(int pidt, char *filename)
 				(long)task->rt_priority, (long)task->static_prio, \
 				(long)task->normal_prio);
 
-			otpt = buffer;
-
 			// Check if given file exists
 			if (fd>=0)
 			{
-				sys_write(fd, otpt, strlen(otpt));
+				sys_write(fd, buffer, strlen(buffer));
 				file = fget(fd);
 
 				if (file)
 				{
-					vfs_write(file, otpt, strlen(otpt), &pos);
+					vfs_write(file, buffer, strlen(buffer), &pos);
 					fput(file);
 				}
 				sys_close(fd);
